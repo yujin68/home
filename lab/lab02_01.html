@@ -9,13 +9,18 @@
         h3 {text-align: center; color: darkred;}
         hr {heigt: 5px; border: solid grey;
             background-color: grey;}
-        span {color: blue; front-size: 20px;}
-        </style>
+        span {color: blue; front-size: 20px;}  </style>
+        <script>
+        function show() {//<img>에 이미지 달기
+        document.getElementByld("fig").src="ElvisPresley.png"}
+        function hide() {//<img>에 이미지 제거
+        document.getElementByld("fig").src="";}
+        </script>
 </head>
 <body>
-<h3>Elvis Presley</h3>
-<hr>
-</body>
+<h3 onmouseover="show()" onmouseout="hide()">Elvis Presley
+</h3> <hr>
+        <div><img id = "fig"src=""></div>
 He was an American singer and actor. In November 1956, he made his film debut in <span> Love Me Tender</span>.
 He is often referred to as "<span>the King of Rock and Roll</span>".
-</html>
+</body></html>
