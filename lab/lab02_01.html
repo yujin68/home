@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <title>웹 페이지의 구성요소</title>
     <style>
-        body {background-color: linen; color: green;
-            margin-left: 40px;margin-right: 40px;}
+        body {background-color: linen; color: green; margin-left: 40px; margin-right: 40px;}
         h3 {text-align: center; color: darkred;}
-        hr {heigt: 5px; border: solid grey;
-            background-color: grey;}
+        hr {height: 5px; border: solid grey; background-color: grey;}
         span {color: blue; font-size: 20px;}
-        </style>
-        <script>
-        function show() {//<img>에 이미지 달기
-        document.getElementById("fig").src="images/ElvisPresley.jpg"}
-        function hide() {//<img>에 이미지 제거
+    </style>
+<script>
+    function show() {//<img>에 이미지 달기
+        document.getElementById("fig").src="images/Elvis Presley.png"}
+    function hide() {//<img>에 이미지 제거
         document.getElementById("fig").src="";}
-        </script>
+</script>
 </head>
 <body>
 <h3 onmouseover="show()" onmouseout="hide()">Elvis Presely</h3>
