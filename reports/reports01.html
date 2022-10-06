@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계정 만들기</title>
+</head>
+<body>
+<h1>취업 정보 계정 만들기</h1>
+<p>* 필수 입력 항목</p>
+<p> 기본 정보</p>
+/*캡션 지정해서 넣기...*/
+/*form으로 묶는 것도 해야할 것 같은데?*/ <br>
+이름* <input type="text" size="8"> <br>
+이메일* <input type="email" size="15" placeholder="id@domain_name"> <br>
+암호* <input type="password" size="12"> <br>
+암호 확인* <input type="password" size="12"> <br>
+모바일 폰* <input type="tel" size="13" placeholder="010-0000-0000"> <br>
+개인 홈페이지 <input type="url" size="30" placeholder="http://"> <br>
+주소* <input type="text" size="30"> <br>
+<div>학 력</div>
+학교 명* <input type="text" size="12"> <br>
+전 공* <input type="text" size="12"> <br>
+졸업 여부* <select name="졸업여부" size="1">
+            <option value="1" selected>---선택---</option>
+            <option value="2">졸업예정</option>
+            <option value="3">졸업</option>
+        </select> <br>
+졸업(예정)일 <input type="date">
+<div> 업무 경력</div>
+근위업체명 <input type="text" size="20"> <br>
+직 위 <input type="text" size="10"> <br>
+담당 업무 <textarea name="job" cols="80" rows="10">
+    이전 업체에서 담당한 업무를 기술하시오.
+        </textarea> <br>
+근무년수 <input type="number" min="0" max="10" step="0.5">년 <br>
+<div>자기소개서</div>
+첨부파일 <input type="file">
+
+</body>
+</html>
