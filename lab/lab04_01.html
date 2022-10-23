@@ -5,11 +5,32 @@
     <title>기본 테이블 만들기</title>
     <style>
         table {
-            border: 1px solid black;
-            /*border-collapse: collapse;*/
+            border: 0px solid white;
+            border-collapse: collapse;
         }
-        th,td {
-            border: 1px solid black;
+        td, th{
+            /*border-bottom: 1px dotted darkgray;*/
+            height: 20px;
+            width: 100px;
+            padding: 10px;
+            text-align: right;
+            /*margin: 20px;*/
+        }
+        thead th {
+            text-align: center;
+        }
+        thead, tfoot {
+            background-color: grey;
+            color: white;
+        }
+        td, tfoot th {
+            border-bottom: 1px solid gray;
+        }
+        tbody tr:nth-child(even) {
+            background-color: lightblue;
+        }
+        tbody tr:hover {
+            background-color: lightcoral;
         }
     </style>
 </head>
@@ -26,7 +47,7 @@
     <tr> <td>1903</td><td>77,400</td><td>35,200</td><td>38,200</td></tr>
 </tbody>
 <tfoot>
-<tr> <td>합계</td><td>224,800</td><td>55,100</td><td>176,200</td></tr>
+<tr> <th>합계</th><th>224,800</th><th>55,100</th><th>176,200</th></tr>
 </tfoot>
 </table>
 </body>

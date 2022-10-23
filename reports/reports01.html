@@ -32,7 +32,7 @@
             <option value="2">졸업예정</option>
             <option value="3">졸업</option>
         </select> </label><br>
-        <label>졸업(예정)일 <input type="date"></label></p>
+        <label>졸업(예정)일 <input type="date" value="2000-12-20"></label></p>
             </article>
 
         <article>
@@ -42,7 +42,13 @@
         <label>담당 업무 <textarea name="job" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.
         </textarea> </label><br>
         <label>근무년수 <input type="number" min="0" max="10" step="0.5">년 </label><br></p>
-            </article>
+        <label>근무강도 <input type="range" min="0" max="100" list="work">
+            <datalist id="work">
+                <option value="5" label="easy"></option>
+                <option value="50" label="medium"></option>
+                <option value="98" label="hard"></option>
+            </datalist></label>
+        </article>
 
         <article>
         <p><div>자기소개서</div></p>
