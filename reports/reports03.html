@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 프로그래밍</title>
+    <script>
+        var bitohe = function (binary) {
+            var hexa ;
+            hexa = parseInt(binary,2) ;
+            if (hexa <= 9) {
+                document.write(hexa) ;
+            } else if (hexa >9) {
+                var list1 = ['A', 'B', 'C', 'D', 'E', 'F'];
+                for (var i = 0; i <= 6; i++) {
+                    var print = list1[0] ;
+                }
+                document.write(print) ;
+            }    //현재 문제는 알파벳이 돌아가면서 안나오고 10을 넘어가면 모두 A로 나온다는 점,,, ^^
+        }
+    </script>
+</head>
+<body>
+<h2>1번</h2>
+<h4> promt() 함수를 통해 키보드로 2진수를 입력받아 16진수로 document에 출력하는 자바스크립트 프로그램을 포함하는
+웹 문서를 작성하시오. </h4> <hr>
+
+<script>
+    var binary = prompt('2진수를 입력하세요: ');
+    bitohe(binary);
+</script>
+</body>
+</html>
