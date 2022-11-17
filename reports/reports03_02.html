@@ -12,12 +12,17 @@
             return ans;
         }
         function new_row(prev_row) {
-            for (var i = 0; i < prev_row; i++) {
-                for (var j=0; j <=i; j++){
+            if (prev_row >= 1){
+                for (var i = 0; i < prev_row; i++) {
+                    for (var j=0; j <=i; j++){
                         document.write( facto(i)/(facto(j)*facto(i-j)) + ' ' );
-                }
+                    }
                 document.write('<br>') ;
+                }
+            } else {
+                document.write('1 이상의 정수를 입력해주세요!') ;
             }
+
         }
     </script>
 </head>
