@@ -7,15 +7,18 @@
         var bitohe = function (binary) {
             var hexa ;
             hexa = parseInt(binary,2) ;
-            if (hexa <= 9) {
+            if (hexa <= 9 && hexa >= 0) {
                 document.write(hexa) ;
-            } else if (hexa >9) {
-                var list1 = ['A', 'B', 'C', 'D', 'E', 'F'];
-                for (var i = 0; i <= 6; i++) {
-                    var print = list1[0] ;
+            } else if (hexa >9 && hexa <= 16) {
+                var alphabet = ['A', 'B', 'C', 'D', 'E', 'F'] ;
+                var pr ;
+                for (var i = 0; i<= 6; i++){
+                    if (hexa - 10 == i){
+                        document.write('<p>' + alphabet[i] + '</p>') ;
+                    }
                 }
-                document.write(print) ;
-            }    //현재 문제는 알파벳이 돌아가면서 안나오고 10을 넘어가면 모두 A로 나온다는 점,,, ^^
+            } else
+                document.write('잘못된 입력값입니다.');
         }
     </script>
 </head>
