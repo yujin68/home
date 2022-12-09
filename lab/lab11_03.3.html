@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while문</title>
+    <script>
+        function gugudan(dan) {      //함수를 선언하는 another 방법: var gugudan = function(dan
+            document.write('<p>' + dan + '단</p>');
+            var i = 1;
+            while (i <= 9) {
+                document.write(dan + '*' + i + '=' + dan*i+ '<br>') ;
+                i ++;
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>구구단</h2>
+<hr>
+<script>
+    var dan = prompt('몇 단?: ');       //prompt를 통해 입력 받기 때문에 dan의 데이터 타입은 문자열임.
+    gugudan(dan) ;
+</script>
+</body>
+</html>

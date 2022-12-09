@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while문 증감의 위치</title>
+</head>
+<body>
+<script>
+    var i = 1, sum = 0;
+    while (sum < 3000) {
+        sum += ++i; // 의 결과는 i = 78
+        // sum += i++; 의 결과는 i = 77
+    }
+    document.write("i 의 결과는? " + i);
+</script>
+</body>
+</html>
