@@ -6,7 +6,7 @@ function say_hello() {
 
     if (name == 'student') {
         var title = document.getElementById("title").innerHTML ;
-    //    var title = document.querySelector("#title").innerHTML ;
+    //    var title = document.querySelector("#title").textContent ;
         title += "& loving it!" ;
         document.getElementById("title").innerHTML = title;
     }
