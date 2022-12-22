@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 매개변수 기본값 처리</title>
+    <script>
+        var order_pizza = function (topping) {
+            if (topping == undefined) {
+                topping = 'cheese' ;
+            }
+            document.write('<p> 토핑이 ' + topping + '인 피자를 주문하셨습니다! </p>');
+        }
+    </script>
+</head>
+<body>
+<h2>피자 주문</h2> <hr>
+<script>
+    var topping = prompt('어떤 토핑을 원하시나요? :') ;
+    order_pizza(topping) ;
+    /* prompt에서 topping으로 아무것도 입력하지 않으면 아무것도 뜨지 않음.
+    만약 order_pizza에 인수자체를 없애버리면 'undefined'가 출력됨.
+     */
+</script>
+</body>
+</html>
