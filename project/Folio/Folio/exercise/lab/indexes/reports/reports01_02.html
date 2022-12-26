@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계정 만들기</title>
+    <style>
+        .star{
+            color: red;
+        }
+        .head{
+            font-weight: bold;
+            background-color: lightblue;
+            width: 800px;
+            padding-left: 10px;
+        }
+        .name{
+            display: inline-block;
+            margin-left: 8px;
+            text-align: right;
+            width: 130px;
+            padding-right: 8px;
+            margin-bottom: 10px;
+        /*    왜 lebel태그를 이용해서 스타일을 주려고 했을 땐 안 됐을까? > 여기에만 display:inline-block이 적용되었으니까 ㅇㅇ*/
+        }
+        #button{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <header>
+        <h1>취업 정보 계정 만들기</h1>
+        <p style="color: red; font-size: 10px; margin-bottom: 20px" >* 필수 입력 항목</p>
+    </header>
+
+    <section>
+        <article>
+            <div class="head">기본 정보</div>
+            <label><p><span class="name">이 름<span class="star">*</span></span> <input type="text" size="8"> </label><br>
+            <label><span class="name">이메일<span class="star">*</span></span> <input type="email" size="15" placeholder="id@domain_name"> </label><br>
+            <label><span class="name">암호<span class="star">*</span></span> <input type="password" size="12"> </label><br>
+            <label><span class="name">암호 확인<span class="star">*</span></span> <input type="password" size="12"> </label><br>
+            <label><span class="name">모바일 폰<span class="star">*</span></span> <input type="tel" size="13" placeholder="010-0000-0000"> </label><br>
+            <label><span class="name">개인 홈페이지</span> <input type="url" size="30" placeholder="http://"> </label><br>
+            <label><span class="name">주소<span class="star">*</span></span> <input type="text" size="30"> </label></p>
+        </article>
+
+        <article>
+            <div class="head">학 력</div>
+            <label><p><span class="name">학교 명<span class="star">*</span></span> <input type="text" size="12"> </label><br>
+            <label><span class="name">전 공<span class="star">*</span></span> <input type="text" size="12"> </label><br>
+            <label><span class="name">졸업 여부<span class="star">*</span></span> <select name="졸업여부" size="1">
+                <option value="1" selected>---선택---</option>
+                <option value="2">졸업예정</option>
+                <option value="3">졸업</option>
+            </select> </label><br>
+            <label><span class="name">졸업 예정일</span> <input type="date"></label></p>
+        </article>
+
+        <article>
+            <div class="head">업무 경력</div>
+            <label><p><span class="name">근무 경력</span> <input type="text" size="20"> </label><br>
+            <label><span class="name">직위</span> <input type="text" size="10"> </label><br>
+            <label><span class="name">담당 업무</span> <textarea name="job" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.
+                    </textarea> </label><br>
+            <label><span class="name">근무년수</span> <input type="number" min="0" max="10" step="0.5">년 </label><br></p>
+        </article>
+
+        <article>
+            <div class="head">자기소개서</div>
+            <label><p><span class="name">첨부파일</span> <input type="file"></label></p>
+            <div id="button">
+                <input class="button" type="submit" value="제 출">
+                <input class="button" type="reset" value="재작성">
+            </div>
+        </article>
+    </section>
+
+</form>
+</body>
+</html>
