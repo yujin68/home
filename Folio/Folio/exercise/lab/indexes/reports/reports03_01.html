@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 프로그래밍</title>
+    <script>
+        var bitohe = function (binary) {
+            if (binary.length == 4 && isFinite(binary)) {
+                var hexa;
+                hexa = parseInt(binary, 2);
+                if (hexa <= 9 && hexa >= 0) {
+                    document.write(hexa);
+                } else if (hexa > 9 && hexa <= 16) {
+                    var alphabet = ['A', 'B', 'C', 'D', 'E', 'F'];
+                    var pr;
+                    for (var i = 0; i <= alphabet.length; i++) {
+                        if (hexa - 10 == i) {
+                            document.write('<p>' + alphabet[i] + '</p>');
+                        }
+                    }
+                } else
+                    document.write('잘못된 입력값입니다.');
+
+            } else {
+                document.write('잘못된 입력값입니다.');
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>1번</h2>
+<h4> promt() 함수를 통해 키보드로 2진수를 입력받아 16진수로 document에 출력하는 자바스크립트 프로그램을 포함하는
+웹 문서를 작성하시오. </h4> <hr>
+
+<script>
+    var binary = prompt('2진수를 입력하세요: ');
+    bitohe(binary);
+</script>
+</body>
+</html>

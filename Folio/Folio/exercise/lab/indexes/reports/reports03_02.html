@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 프로그래밍</title>
+    <script>
+
+        function new_row(prev_row) {
+            if (prev_row >= 1){
+                for (var i = 0; i < prev_row; i++) {
+                    for (var j=0; j <=i; j++){
+                        document.write( facto(i)/(facto(j)*facto(i-j)) + ' ' );
+                    }
+                document.write('<br>') ;
+                }
+            } else {
+                document.write('1 이상의 정수를 입력해주세요!') ;
+            }
+
+            function facto(num) {
+            var ans = 1;
+            for (var n = 1; n <= num; n++) {
+                ans = ans * n ;
+            }
+            return ans;
+            } // 해당함수의 위치는 new_row 함수의 안/밖 무관.
+        }
+    </script>
+</head>
+<body>
+<h2>2번</h2>
+<h4>promt() 함수를 통해 키보드로 파스칼 삼각형의 높이값을 입력받아
+    다음과 같이 document에 출력하는 자바스크립트 프로그램을 포함하는 웹 문서를 작성하시오.</h4>
+<hr>
+<script>
+    var prev_row = prompt('파스칼의 삼각형의 높이: ');
+    new_row(prev_row);
+</script>
+</body>
+</html>

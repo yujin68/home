@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if 조건문. 함수</title>
+        <script>
+        function get_grade(score) {
+            var grade ;
+            if (score >= 90){
+                grade = 'A' ;     //이렇게 명령문이 하나인 경우는 중괄호 생략 가능.
+             } else if (score >= 80){
+               grade = 'B' ;
+             } else if (score >= 70){
+                grade = 'C' ;
+             } else if (score >= 60){
+               grade = 'D' ;
+             } else {
+               grade = 'F' ;
+             }
+              return grade ;
+        }
+
+    </script>
+</head>
+<body>
+<script>
+     var score = prompt('점수를 입력하세요: ', 0) ; //0을 기본 입력값으로 둠.
+     var grade = get_grade(score) ;
+
+     console.log(score + '----> ' + grade) ;  //웹브라우저 화면에 찍히는 값이 아니라 중간에 값을 확인하기 위함.
+     document.write('<p> 점수 : ' + score + '---> '+ grade + '입니다.</p>') ;
+
+</script>
+</body>
+</html>

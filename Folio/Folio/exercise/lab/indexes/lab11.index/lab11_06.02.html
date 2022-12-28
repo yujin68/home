@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array 내장 객체 2</title>
+    <script>
+        function plot (data) {
+            document.write('<p>' + data + '</p>')
+            for (var i = 0; i < data.length; i++) {
+                var size = data[i] ;
+                while(size > 0) {
+                    document.write('*') ;
+                    size--;
+                }
+                document.write(data[i] + '<br>') ;
+            }
+        }
+    </script>
+</head>
+<body>
+<h2> 그래프 그리기 </h2>
+<hr>
+<script>
+    var plots_data = [20, 5, 8, 15, 18] ;
+    var data2 = [5,2] ;
+    // plot(plots_data) ;
+
+    var x = plots_data.concat(data2) ; //결합
+    document.write('<p>' + x + '</p>') ;
+
+    var y = plots_data.reverse() ; //거꾸로 뒤집기
+    document.write('<p>' + y + '</p>') ;
+
+    plots_data.sort() ;
+    //여기서는 문자열로 sorting이 들어가기 때문에 15,18,20,5,8 요렇게 나옴 (1(5>8)>2>5>8)
+    document.write('<p>' + plots_data + '</p>') ;
+</script>
+</body>
+</html>

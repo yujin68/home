@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+</head>
+<body>
+<h2>자동차 객체 만들기</h2> <hr>
+    <script>
+        var my_car = new Object() ; //객체 생성 (O대문자 필수!!!!!!!!!!)
+        my_car.maker = 'Hyundai' ; //객체의 속성 생성 & 속성값 부여
+        my_car.model = 'Grandeur' ;
+        my_car['price'] = 3800; //price를 dict의 key처럼 접근하는 것도 가능(이것도 속성 생성&값 부여)
+        my_car.speed = 0;
+        // maker와 model, price 속성은 데이터 (데이터 속성).
+
+        my_car['accelerate'] = function (){
+            my_car.speed += 10 ;
+        }
+        my_car.stop = function (){
+            my_car['speed'] = 0 ;
+        }
+        // acceletrate,stop의 속성은 함수 (메소드 속성)
+
+        document.write('<p> 제조사 : ' + my_car.maker + '</p>') ;
+        document.write('<p> 가격 : ' + my_car['price'] + '</p>') ;
+        document.write(my_car) ;
+
+        console.log(my_car) ; //console에서 확인할 때는 속성이 알파벳 순으로 정렬되어 보임.
+
+        var company = {
+            name: 'Microsoft',
+            ceo:  {
+                name: 'Bill Gates',
+                fav_color: 'blue',
+            },
+            'stock_of_company': 110, //속성은 문자열로하든, 변수로 하든 상관 없음.
+            promote : function () {
+                document.write('승진했습니다.') ;
+            }
+        } ;
+
+        document.write('<hr>');
+
+        for (var prop in my_car) {
+                    document.write('<p>' + prop + ' : ' + my_car[prop] + '</p>') ;
+        }
+        // for in을 통해 객체의 모든 속성을 한 번에 엑세스 가능함.
+
+        document.write('<hr>');
+
+        document.write('<p> 업체 이름: ' + company.name + '</p>') ;
+        document.write('<p> 주식보유량: ' + company.stock_of_company + '</p>') ; // 문자열로 속성을 정의해도 엑세스 할때는 변수 취급함.
+        document.write('<p> ceo 이름: ' + company.ceo.name + '</p>') ;
+        //ceo는 company에 들어가있는 또 다른 객체이기 때문에 엑세스 할때 '객체.객체.속성'으로 해줘야 함.
+        document.write(company.promote()) ; //함수를 엑세스 (함수를 호출한 결과를 찍어라)
+        console.log(company) ;
+        // company variable은 웹브라우저 화면에는 나오지 않음. console을 통해서 확인 가능.
+
+    </script>
+</body>
+</html>
